@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ustoria": {
+    "ustora": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ustoria",
+            "outputPath": "dist/ustora",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,9 +25,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/jquery.sticky.js",
+              "src/assets/js/main.js",
+              "src/assets/js/script.slider.js",
+              "src/assets/js/jquery.easing.1.3.min.js"
+
+
+            ]
           },
           "configurations": {
             "production": {
@@ -57,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ustoria:build:production"
+              "buildTarget": "ustora:build:production"
             },
             "development": {
-              "buildTarget": "ustoria:build:development"
+              "buildTarget": "ustora:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ustoria:build"
+            "buildTarget": "ustora:build"
           }
         },
         "test": {
@@ -91,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "12bffb51-840e-43fb-a88d-c2634f462504"
   }
 }
