@@ -40,20 +40,20 @@
 
 <div class="site-branding-area">
   <div class="container">
-      <div class="row">
-          <div class="col-5 col-lg-5 col-md-3 col-sm-1 align-items-center">
-              <div class="logo">
-                  <h1><a href="./"><img src="../../assets/img/logo.png"></a></h1>
-              </div>
-          </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+            <div class="logo">
+                <h1><a href="./"><img src="../../assets/img/logo.png"></a></h1>
+            </div>
+        </div>
 
-          <div class="col-sm-6">
-              <div class="shopping-item">
-                  <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
-              </div>
-          </div>
-      </div>
-  </div>
+        <div class="col-sm-6">
+            <div class="shopping-item">
+                <a href="cart.html">Cart - <span class="cart-amunt">{{cart.totalPrice}}</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">{{productCount}}</span></a>
+            </div>
+        </div>
+    </div>
+</div>
 </div> <!-- End site branding area -->
 
 <div class="mainmenu-area">
@@ -75,7 +75,7 @@
             <a class="nav-link" routerLink="/shop">Shop Page</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/singleproduct">Single product</a>
+            <a class="nav-link" routerLink="/singleproduct/1">Single product</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/cart">Cart</a>

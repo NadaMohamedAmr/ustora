@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { CartService } from '../services/cart/cart.service';
+import { Cart } from '../shared/models/Cart';
+
 
 @Component({
   selector: 'app-checkout',
@@ -8,5 +11,11 @@ import { Component } from '@angular/core';
   styleUrl: './checkout.component.css'
 })
 export class CheckoutComponent {
-
+  cart!:Cart;
+constructor(private cartservice : CartService){
+this.setCart();
+}
+setCart(){
+  this.cart=this.cartservice.getcart();
+}
 }
